@@ -17,7 +17,7 @@ export interface IUserOptionModel extends IBaseModel {
     readonly passwordOptions: Array<IPasswordOptionModel>
 }
 
-interface IPasswordOptionModel {
+export interface IPasswordOptionModel {
     readonly isPrivateKey: Boolean
     readonly privateKey: String
     readonly minLength: Number
