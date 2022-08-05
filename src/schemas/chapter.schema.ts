@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
 
-export const CategorySchema = new mongoose.Schema({
+export const ChapterSchema = new mongoose.Schema({
     name: String,
     impressions: Array,
     categories: Array,
