@@ -7,7 +7,7 @@ import { IMongoType } from 'src/middlewares/utils/mongo.util';
 
 @Injectable()
 export class MessageService implements IMessageService {
-    constructor(@InjectModel("Menus") private model: Model<IMessageModel>) { }
+    constructor(@InjectModel("Messages") private model: Model<IMessageModel>) { }
 
     findAll(dynamicParameters?: PipelineStage[]): Promise<IMessageModel[]> {
         return this.model.aggregate(dynamicParameters).exec();
