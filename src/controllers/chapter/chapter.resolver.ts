@@ -12,7 +12,7 @@ export class ChapterResolver implements IChapterResolver {
     }
 
     chapters(): Promise<IChapterModel[]> {
-        return this.proxy.findAll()
+        return this.proxy.findAll();
     }
     chapterById(id: String): Promise<IChapterModel> {
         return this.proxy.findById(id);
