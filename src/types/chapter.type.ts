@@ -15,7 +15,7 @@ export class ChapterType extends MongoType implements IChapterModel {
     @Field({ nullable: true })
     descriptions: any[];
     @Field({ nullable: true })
-    status: String;
+    status: Boolean;
     @Field({ nullable: true })
     image_path: String;
     @Field({ nullable: true })

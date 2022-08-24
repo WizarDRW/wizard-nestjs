@@ -6,7 +6,7 @@ export interface IChapterModel extends IBaseModel {
     readonly categories: Array<any>
     readonly description: String
     readonly descriptions: Array<any>
-    readonly status: String
+    readonly status: Boolean
     readonly image_path: String
     readonly short_description: String
     readonly create_date: Date
