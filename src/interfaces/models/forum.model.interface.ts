@@ -5,7 +5,7 @@ export interface IForumModel extends IBaseModel {
     readonly impressions: Array<any>
     readonly categories: Array<any>
     readonly description: String
-    readonly status: String
+    readonly status: Boolean
     readonly create_date: Date
     readonly update_date: Date
     readonly comments: Array<ICommentModel>
