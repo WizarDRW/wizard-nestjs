@@ -20,8 +20,25 @@ import { UserModule } from './controllers/user/user.module';
 import { UserOptionModule } from './controllers/useroption/user.option.module';
 
 @Module({
-  imports: [AppModule, ChapterModule, NewsModule, MongooseModule.forRoot(""), AboutModule, CategoryModule, DraftModule, ForumModule, LibraryModule, LogModule, MenuModule, MessageModule, OptionModule, TaskModule, ThemeModule, UserModule, UserOptionModule],
+  imports: [
+    AppModule,
+    ChapterModule,
+    NewsModule,
+    MongooseModule.forRoot("mongodb://localhost:27017"),
+    AboutModule,
+    CategoryModule,
+    DraftModule,
+    ForumModule,
+    LibraryModule,
+    LogModule,
+    MenuModule,
+    MessageModule,
+    OptionModule,
+    TaskModule,
+    ThemeModule,
+    UserModule,
+    UserOptionModule],
   controllers: [AppController],
-  providers: [AppService, ChapterService],
+  providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
