@@ -13,7 +13,7 @@ export class ForumCreateInput implements IForumModel {
     @Field({ nullable: true })
     description: String;
     @Field({ nullable: true })
-    status: String;
+    status: Boolean;
     @Field({ nullable: true })
     create_date: Date;
     @Field({ nullable: true })
@@ -43,7 +43,7 @@ export class ForumUpdateInput extends BaseInput implements IForumModel {
     @Field({ nullable: true })
     description: String;
     @Field({ nullable: true })
-    status: String;
+    status: Boolean;
     @Field({ nullable: true })
     create_date: Date;
     @Field({ nullable: true })
