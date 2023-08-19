@@ -5,17 +5,17 @@ import { BaseInput } from "./base.input";
 @InputType()
 export class MenuCreateInput implements IMenuModel {
     @Field({ nullable: true })
-    name: String;
+    name?: String;
     @Field({ nullable: true })
-    description: String;
+    description?: String;
     @Field({ nullable: true })
-    path: String;
+    path?: String;
     @Field({ nullable: true })
-    status: Boolean;
+    status?: Boolean;
     @Field({ nullable: true })
-    sort: String;
-    @Field({ nullable: true })
-    children: Object;
+    sort?: String;
+    @Field(types => [MenuCreateInput], { nullable: true })
+    children?: Array<MenuCreateInput>;
     @Field({ nullable: true })
     _id: String;
 }
@@ -23,15 +23,15 @@ export class MenuCreateInput implements IMenuModel {
 @InputType()
 export class MenuUpdateInput extends BaseInput implements IMenuModel {
     @Field({ nullable: true })
-    name: String;
+    name?: String;
     @Field({ nullable: true })
-    description: String;
+    description?: String;
     @Field({ nullable: true })
-    path: String;
+    path?: String;
     @Field({ nullable: true })
-    status: Boolean;
+    status?: Boolean;
     @Field({ nullable: true })
-    sort: String;
-    @Field({ nullable: true })
-    children: Object;
+    sort?: String;
+    @Field(types => [MenuUpdateInput], { nullable: true })
+    children?: Array<MenuUpdateInput>;
 }

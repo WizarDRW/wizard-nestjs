@@ -6,5 +6,5 @@ export const MenuSchema = new mongoose.Schema({
     path: String,
     status: Boolean,
     sort: String,
-    children: Object
+    children: Array
 });

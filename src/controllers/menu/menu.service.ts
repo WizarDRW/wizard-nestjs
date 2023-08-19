@@ -10,7 +10,7 @@ export class MenuService implements IMenuService {
     constructor(@InjectModel("Menus") private model: Model<IMenuModel>) { }
 
     findAll(dynamicParameters?: PipelineStage[]): Promise<IMenuModel[]> {
-        return this.model.aggregate(dynamicParameters).exec();
+        return this.model.find().exec();
     }
     findById(id: String): Promise<IMenuModel> {
         return this.model.findById(id).exec();
